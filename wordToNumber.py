@@ -11,15 +11,15 @@ def word_to_number(word):
     for element in word_split:
         if element in ones:
             current_value+=ones[element]
-        elif element in teen:
+        if element in teen:
             current_value+=teen[element] 
-        elif element in tens:
+        if element in tens:
             current_value+=tens[element]
-        elif element in bigdigit:
+        if element in bigdigit:
             current_value*=bigdigit[element]
             number+=current_value
             current_value=0
-        elif element == "and":
+        if element == "and":
             continue
     number+=current_value
 
